@@ -1,0 +1,9 @@
+.site-footer {
+    color: var(--vp-c-text-2);
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 2rem;
+    width: 100%;
+    padding: 1rem 0;
+    overflow: auto;
+}

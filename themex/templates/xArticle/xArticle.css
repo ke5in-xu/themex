@@ -1,0 +1,21 @@
+.post-info {
+    font-size: 0.75rem;
+    padding-bottom: 1rem;
+}
+
+.post-info span {
+    display: inline-block;
+    padding: 0 0.5rem;
+    background-color: var(--vp-c-bg-soft);
+    margin: 0 0.25rem;
+    border-radius: 2px;
+    color: var(--vp-c-text-1);
+}
+
+.post-info span:hover {
+    background-color: var(--vp-c-bg-alt);
+}
+
+.post-hero {
+    margin-bottom: 2rem;
+}

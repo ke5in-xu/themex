@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import './markdown.css';
+
+:root {
+    --vp-font-family-base: 'Poppins', 'PingFang SC', 'Microsoft Yahei', sans-serif;
+
+    --themex-brand: #ff8000;
+    --vp-c-brand: var(--themex-brand);
+    --vp-c-brand-1: var(--themex-brand);
+    --vp-c-brand-2: color-mix(in srgb, var(--themex-brand) 85%, white);
+    --vp-c-brand-3: color-mix(in srgb, var(--themex-brand) 70%, white);
+    --vp-c-brand-soft: color-mix(in srgb, var(--themex-brand) 14%, transparent);
+    --vp-c-bg-soft: #f0f0f0;
+    --vp-nav-logo-height: 32px;
+
+    --dot-bg: #f0f0f0;
+    --dot-color: #cacaca;
+    --themex-shell-width: 1280px;
+    --themex-shell-padding: var(--padding, 0px);
+}
+
+.dark {
+    --vp-c-brand-2: color-mix(in srgb, var(--themex-brand), white 25%);
+    --vp-c-brand-3: color-mix(in srgb, var(--themex-brand), white 45%);
+    --vp-c-brand-soft: color-mix(in srgb, var(--themex-brand) 16%, transparent);
+    --vp-c-bg-soft: #32363f;
+    --dot-bg: #161618;
+    --dot-color: #32363f;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ---- Framed shell layout ---- */
+
+#app {
+    width: var(--themex-shell-width);
+    background-color: var(--vp-c-bg);
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    padding: var(--themex-shell-padding);
+    position: relative;
+    top: var(--themex-shell-padding);
+}
+
+body {
+    width: 100vw;
+    overscroll-behavior: none;
+}
+
+body::before {
+    content: '';
+    --dot-size: 2px;
+    --dot-space: 24px;
+    background:
+        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+/* ---- Nav bar overrides ---- */
+
+.dark .VPImage.logo {
+    filter: invert(1);
+}
+
+#app .VPNav {
+    left: auto;
+    width: calc(var(--themex-shell-width) - 2px);
+}
+
+#app .VPNavBar {
+    background-color: var(--vp-nav-bg-color);
+}
+
+#app .VPNavBar.has-sidebar .title {
+    padding: 0;
+    position: relative;
+    border-bottom: 1px solid transparent;
+    width: auto;
+}
+
+#app .VPNavBar.has-sidebar .divider {
+    padding: 0;
+}
+
+#app .VPNavBarMenuLink,
+#app .VPNavBarMenuGroup .text {
+    font-weight: 600;
+}
+
+#app .VPNavBarMenuLink.active > span,
+#app .VPNavBarMenuGroup.active .text > span {
+    line-height: 2;
+    box-shadow: 0 -2px 0 0 var(--vp-c-brand) inset;
+}
+
+#app .VPNavBarSearch {
+    padding-left: 24px;
+}
+
+/* ---- Sidebar overrides ---- */
+
+#app .VPSidebar {
+    left: auto;
+    width: var(--vp-sidebar-width);
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+#VPSidebarNav {
+    padding-top: 10px;
+}
+
+/* ---- Content layout overrides ---- */
+
+#app .VPDoc {
+    padding: 48px 24px 0;
+}
+
+#app .VPDocFooter {
+    margin-top: 160px;
+}
+
+#app .Layout {
+    min-height: calc(100vh - 4rem - 2px);
+}
+
+#app .aside-curtain {
+    bottom: 1px;
+}
+
+#app .social-links {
+    margin-right: -1rem;
+}
+
+#app .container:has(.grid),
+#app .content:has(.grid),
+#app .VPDoc:has(.xcard-grid) .container,
+#app .VPDoc:has(.xcard-grid) .content,
+#app .VPDoc:has(.xcard-grid) .content-container {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+#app .VPDoc:has(.xcard-grid) {
+    max-width: 100% !important;
+    padding-left: 64px !important;
+    padding-right: 64px !important;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 1279px) {
+    #app {
+        width: 100%;
+        border: none;
+    }
+
+    #app .VPNav {
+        width: 100%;
+    }
+}
+
+@media (min-width: 960px) {
+    #app .has-sidebar .VPSidebar {
+        padding-top: calc(var(--vp-nav-height) + 16px);
+    }
+
+    #app .has-sidebar .VPLocalNavOutlineDropdown .items {
+        left: calc(var(--vp-sidebar-width) + 16px);
+    }
+}
+
+@media (min-width: 768px) {
+    #app .content {
+        padding: 0 16px;
+    }
+
+    #app .wrapper {
+        padding: 0 24px;
+    }
+
+    #app .VPDoc.has-sidebar.has-aside .content-container {
+        padding: 0 16px;
+    }
+}
+
+@media (min-width: 1440px) {
+    #app .VPDoc:not(.has-sidebar) .container {
+        max-width: 992px;
+    }
+
+    #app .VPContent.has-sidebar {
+        padding-left: var(--vp-sidebar-width);
+        padding-right: 0;
+    }
+}

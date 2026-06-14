@@ -1,0 +1,33 @@
+.VPBadge {
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 0 8px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+    white-space: nowrap;
+    color: var(--vp-c-text-2);
+    background-color: var(--vp-c-default-soft);
+}
+
+.VPBadge.info {
+    color: var(--vp-c-text-2);
+    background-color: var(--vp-c-default-soft);
+}
+
+.VPBadge.tip {
+    color: #3b82f6;
+    background-color: rgba(59, 130, 246, 0.14);
+}
+
+.VPBadge.warning {
+    color: var(--vp-c-warning-1);
+    background-color: var(--vp-c-warning-soft);
+}
+
+.VPBadge.danger {
+    color: var(--vp-c-danger-1);
+    background-color: var(--vp-c-danger-soft);
+}

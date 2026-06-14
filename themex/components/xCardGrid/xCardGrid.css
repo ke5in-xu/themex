@@ -1,0 +1,55 @@
+.xcard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 96px;
+}
+
+@media (min-width: 960px) {
+    .xcard-grid { margin-bottom: 128px; }
+}
+
+.xcard-grid .xcard-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: var(--vp-c-bg);
+}
+
+.xcard-grid .xcard-card:hover {
+    border-color: var(--vp-c-brand-1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.xcard-img {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.xcard-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+}
+
+.xcard-title {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    margin: 0 0 8px;
+    color: var(--vp-c-text-1);
+}
+
+.xcard-desc {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--vp-c-text-2);
+    margin: 0;
+}

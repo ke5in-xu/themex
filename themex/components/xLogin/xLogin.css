@@ -1,0 +1,23 @@
+.login {
+    display: flex;
+    cursor: pointer;
+}
+
+.login::before {
+    margin-right: 16px;
+    margin-left: 16px;
+    width: 1px;
+    height: 24px;
+    background-color: var(--vp-c-divider);
+    content: "";
+}
+
+.user-info {
+    height: 24px;
+    display: flex;
+}
+
+.avatar {
+    height: 24px;
+    display: inline-block;
+}

@@ -1,0 +1,112 @@
+.themex-lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: themex-lightbox-fade-in 0.2s ease;
+}
+
+@keyframes themex-lightbox-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes themex-lightbox-img-in {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.themex-lightbox-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+.themex-lightbox-img {
+    max-width: 90vw;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 4px;
+    animation: themex-lightbox-img-in 0.2s ease;
+}
+
+.themex-lightbox-close {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+    z-index: 1;
+}
+
+.themex-lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.themex-lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+    z-index: 1;
+}
+
+.themex-lightbox-arrow:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.themex-lightbox-prev {
+    left: -64px;
+}
+
+.themex-lightbox-next {
+    right: -64px;
+}
+
+.themex-lightbox-counter {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .themex-lightbox-prev {
+        left: 8px;
+    }
+    .themex-lightbox-next {
+        right: 8px;
+    }
+    .themex-lightbox-arrow {
+        width: 40px;
+        height: 40px;
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "type": "module",
+  "devDependencies": {
+    "fs-extra": "^11.2.0",
+    "globby": "^14.0.1",
+    "gray-matter": "^4.0.3",
+    "vitepress": "^1.6.3"
+  },
+  "dependencies": {
+    "markdown-it-custom-attrs": "^1.0.2"
+  }
+}
