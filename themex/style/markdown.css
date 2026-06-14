@@ -59,10 +59,15 @@
     --vp-c-brand-3: color-mix(in srgb, var(--themex-brand) 70%, white);
     --vp-c-brand-soft: color-mix(in srgb, var(--themex-brand) 14%, transparent);
 
-    --vp-c-tip-1: var(--vp-c-brand-1);
-    --vp-c-tip-2: var(--vp-c-brand-2);
-    --vp-c-tip-3: var(--vp-c-brand-3);
-    --vp-c-tip-soft: var(--vp-c-brand-soft);
+    --vp-c-blue-1: #2563eb;
+    --vp-c-blue-2: #3b82f6;
+    --vp-c-blue-3: #60a5fa;
+    --vp-c-blue-soft: rgba(59, 130, 246, 0.14);
+
+    --vp-c-tip-1: var(--vp-c-blue-1);
+    --vp-c-tip-2: var(--vp-c-blue-2);
+    --vp-c-tip-3: var(--vp-c-blue-3);
+    --vp-c-tip-soft: var(--vp-c-blue-soft);
     --vp-c-note-1: var(--vp-c-brand-1);
     --vp-c-note-2: var(--vp-c-brand-2);
     --vp-c-note-3: var(--vp-c-brand-3);
@@ -146,8 +151,8 @@
 
 .dark,
 [data-theme='dark'] {
-    --vp-c-bg: #1b1b1f;
-    --vp-c-bg-alt: #161618;
+    --vp-c-bg: #202025;
+    --vp-c-bg-alt: #1b1b1f;
     --vp-c-bg-soft: #32363f;
     --vp-c-border: #3c3f44;
     --vp-c-divider: #2e2e32;
@@ -180,6 +185,11 @@
     --vp-c-brand-2: color-mix(in srgb, var(--themex-brand), white 25%);
     --vp-c-brand-3: color-mix(in srgb, var(--themex-brand), white 45%);
     --vp-c-brand-soft: color-mix(in srgb, var(--themex-brand) 16%, transparent);
+
+    --vp-c-blue-1: #60a5fa;
+    --vp-c-blue-2: #3b82f6;
+    --vp-c-blue-3: #2563eb;
+    --vp-c-blue-soft: rgba(59, 130, 246, 0.16);
 }
 
 .themex-md,

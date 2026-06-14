@@ -50,7 +50,7 @@ Themex provides four page templates:
 | Home       | `/`               | Landing page with hero section and feature grid |
 | Collection | `/posts/`         | Item listing with tag filter and card grid      |
 | Post       | `/posts/{slug}/`  | Individual post with date, tags, hero           |
-| Doc        | `/documents/*`    | Documentation with left sidebar navigation      |
+| Doc        | `/docs/*`    | Documentation with left sidebar navigation      |
 
 ## Item Frontmatter
 

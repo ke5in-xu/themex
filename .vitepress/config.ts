@@ -8,7 +8,7 @@ export default defineConfig({
     head: [
       ['link', { rel: 'icon', href: '/favicon/favicon.svg' }],
     ],
-    title: 'Themex',
+    title: 'ThemeX',
     base: '/',
     description: 'A VitePress theme demo — blog, docs, lightbox, dark mode',
     ignoreDeadLinks: true,
@@ -17,24 +17,34 @@ export default defineConfig({
         items: await getItems('src/posts/*/index.md'),
         itemsPath: '/posts/',
         heroDir: '/post-hero',
-        siteTitle: 'Themex',
+        siteTitle: 'ThemeX',
         brandColor: '#ff8000',
         showAvatar: true,
         logo: '/logo/logo.svg',
         nav: [
             { text: 'Home', link: '/'},
             { text: 'Collection', link: '/posts/', activeMatch:'/posts/'},
-            { text: 'Docs', activeMatch:'/documents/', items: [
-              { text: 'Getting Started', link: '/documents/getting-started/' },
-              { text: 'Markdown Examples', link: '/documents/markdown-examples/' }
+            { text: 'Docs', activeMatch:'/docs/', items: [
+              { text: 'What is ThemeX', link: '/docs/what-is-themex/' },
+              { text: 'Getting Started', link: '/docs/getting-started/' },
+              { text: 'Markdown Examples', link: '/docs/markdown-examples/' }
             ]}
         ],
         sidebar: {
-          '/documents/getting-started/': [
-            { text: 'Getting Started', link: '/documents/getting-started/' }
-          ],
-          '/documents/markdown-examples/': [
-            { text: 'Markdown Examples', link: '/documents/markdown-examples/' }
+          '/docs/': [
+            {
+              text: 'Introduction',
+              items: [
+                { text: 'What is ThemeX', link: '/docs/what-is-themex/' },
+                { text: 'Getting Started', link: '/docs/getting-started/' }
+              ]
+            },
+            {
+              text: 'Writing',
+              items: [
+                { text: 'Markdown Examples', link: '/docs/markdown-examples/' }
+              ]
+            }
           ]
         },
         search: {

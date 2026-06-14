@@ -2,13 +2,13 @@
 layout: home
 
 hero:
-  name: 'themex'
+  name: 'ThemeX'
   text: 'A VitePress Theme'
-  tagline: Framed layout · Blog collection · Image lightbox · Light/Dark mode
+  tagline: Build something beautiful, ship it fast.
   actions:
     - theme: brand
       text: Get Started
-      link: /documents/getting-started/
+      link: /docs/getting-started/
     - theme: alt
       text: View Posts
       link: /posts/
@@ -22,11 +22,11 @@ cards:
     - title: Article Layout
       description: Every post gets date, tags, and hero image rendered automatically. Doc pages stay clean with sidebar navigation.
       image: /post-hero/placeholder.svg
-      link: /documents/getting-started/
+      link: /docs/getting-started/
     - title: Image Lightbox
       description: Click any image to zoom. Gallery navigation with keyboard arrows. Zero external dependencies. Built into the theme.
       image: /post-hero/placeholder.svg
-      link: /documents/markdown-examples/
+      link: /docs/markdown-examples/
     - title: Dark Mode
       description: Full light/dark support with automatic CSS variable switching. Logo adapts via CSS filter — no extra image needed.
       image: /post-hero/placeholder.svg
