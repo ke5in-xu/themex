@@ -1,1 +1,1 @@
-export { default } from '../../themex'
+export { default } from '@ke5in-xu/themex'

@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { getItems } from '../themex/lib/items'
+import { getItems } from '@ke5in-xu/themex/lib/items'
 import mdItCustomAttrs from "markdown-it-custom-attrs"
 
 
